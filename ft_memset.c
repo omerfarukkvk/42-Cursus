@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 //c'deki değeri n kadar str'ye yazar
 void	*ft_memset(void *str, int c, size_t n)
 {

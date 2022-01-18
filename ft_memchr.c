@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/05 22:15:39 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/06 01:16:09 by okavak           ###   ########.fr       */
+/*   Created: 2022/01/18 03:04:24 by okavak            #+#    #+#             */
+/*   Updated: 2022/01/18 03:09:54 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//alfabetik bir karakter olup olmadığını kontrol eder.
-int	ft_isalpha(int a)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-		return (1);
-	else
-		return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (*((unsigned char *)s + i) == (unsigned char)c)
+			return ((void *)s + i);
+		i++;
+	}
+	return (0);
 }
-/*int	main()
-{
-	printf("%d",ft_isalpha('1'));
-}*/

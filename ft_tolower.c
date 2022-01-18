@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 //büyük harfleri küçük harfe çevirir
 int	ft_tolower(int c)
 {

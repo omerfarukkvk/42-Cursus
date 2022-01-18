@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 //rakam (0-9) olup olmadığını kontrol eder.
 int	ft_isdigit(int a)

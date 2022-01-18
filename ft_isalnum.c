@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 //alfabetik bir karakter veya rakam olup olmadığını kontrol eder.
 int	ft_isalnum(int a)

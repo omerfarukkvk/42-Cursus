@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/05 22:15:39 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/06 01:16:09 by okavak           ###   ########.fr       */
+/*   Created: 2022/01/18 12:18:25 by okavak            #+#    #+#             */
+/*   Updated: 2022/01/18 12:19:54 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//alfabetik bir karakter olup olmadığını kontrol eder.
-int	ft_isalpha(int a)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-		return (1);
-	else
-		return (0);
+	
 }
-/*int	main()
-{
-	printf("%d",ft_isalpha('1'));
-}*/

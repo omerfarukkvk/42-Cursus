@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 //1.girilen pointeri verilen byte kadar "\0" yazdirir.
 void	*ft_bzero(void *str, size_t n)
 {

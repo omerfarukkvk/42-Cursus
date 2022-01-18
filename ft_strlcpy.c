@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/05 22:15:39 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/06 01:16:09 by okavak           ###   ########.fr       */
+/*   Created: 2022/01/17 17:33:08 by okavak            #+#    #+#             */
+/*   Updated: 2022/01/17 18:29:59 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//alfabetik bir karakter olup olmadığını kontrol eder.
-int	ft_isalpha(int a)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	if ((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))
-		return (1);
-	else
+	size_t	i;
+
+	i = 0;
+	if (!dst || !src)
 		return (0);
+	while (src[i] && i < dstsize)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = 0;
+	return (ft_strlen(src));
 }
 /*int	main()
 {
-	printf("%d",ft_isalpha('1'));
+	char	a[] = "omer";
+	char	b[] = "faruk";
+	ft_strlcpy(&a[0],&b[0],4);
+	//printf("%zu", ft_strlcpy(a,b,2));
+	printf("a verisi %s\nb verisi %s",a,b);
 }*/

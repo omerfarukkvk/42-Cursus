@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 //yazdırılabilir bir karakter olup olmadığını kontrol eder.
 int	ft_isprint(int a)

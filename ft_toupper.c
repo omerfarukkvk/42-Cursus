@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 //küçük harfleri büyük harfe çevirir
 int	ft_toupper(int c)
 {

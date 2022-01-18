@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 //ascii tablosundan bir karakter olup olmadığını kontrol eder.
 int	ft_isascii(int a)
