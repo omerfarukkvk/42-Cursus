@@ -12,7 +12,7 @@
 
 #include "libft.h"
 //1.girilen pointeri verilen byte kadar "\0" yazdirir.
-void	*ft_bzero(void *str, size_t n)
+void	ft_bzero(void *str, size_t n)
 {
 	unsigned char	*p;
 
@@ -23,7 +23,6 @@ void	*ft_bzero(void *str, size_t n)
 		p++;
 		n--;
 	}
-	return (p + n);
 }
 /*int	main()
 {
