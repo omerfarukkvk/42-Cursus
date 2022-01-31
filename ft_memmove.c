@@ -6,11 +6,12 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 18:59:50 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/14 19:11:59 by okavak           ###   ########.fr       */
+/*   Updated: 2022/01/30 17:45:00 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*tmp;

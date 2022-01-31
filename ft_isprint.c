@@ -15,7 +15,7 @@
 //yazdırılabilir bir karakter olup olmadığını kontrol eder.
 int	ft_isprint(int a)
 {
-	if (a >= 32 && a <= 127)
+	if (a >= 32 && a <= 126)
 		return (1);
 	else
 		return (0);

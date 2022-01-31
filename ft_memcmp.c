@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 11:01:52 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/18 12:17:41 by okavak           ###   ########.fr       */
+/*   Updated: 2022/01/31 00:04:12 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
+	size_t				i;
 	unsigned const char	*a;
 	unsigned const char	*b;
 

@@ -6,15 +6,16 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:30:16 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/18 01:55:53 by okavak           ###   ########.fr       */
+/*   Updated: 2022/01/31 00:02:06 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	size_t	length;
 
 	length = ft_strlen(dst);
@@ -33,10 +34,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	}
 	return (size + ft_strlen(src));
 }
-int	main()
+/*int	main()
 {
 	char	a[]	= "omer";
 	char	b[] = "faruk";
 
 	printf("%zu",ft_strlcat(a,b,3));
-}
+}*/

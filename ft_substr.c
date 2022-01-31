@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/11 10:42:26 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/30 17:44:30 by okavak           ###   ########.fr       */
+/*   Created: 2022/01/30 20:54:49 by okavak            #+#    #+#             */
+/*   Updated: 2022/01/31 00:03:28 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*source;
-	unsigned char	*dest;
+	char	*res;
+	size_t	index;
 
-	source = (unsigned char *)src;
-	dest = (unsigned char *)dst;
-	if (!dst && !src)
-		return (dst);
-	while (n--)
-		*dest++ = *source++;
-	return (dst);
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	res = (char *)malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (NULL);
+	index = 0;
+	while (len--)
+		res[index++] = s[start++];
+	res[index] = '\0';
+	return (res);
 }
 /*int	main()
 {
-	char a[] = "hello";
-	char b[] = "world!";
-	printf("%s",ft_memcpy(&a[0], &b[0], 3));
+	printf("%s",ft_substr("deneme", 2, 4));
 }*/

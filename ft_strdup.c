@@ -5,27 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/29 17:28:11 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/29 17:28:13 by okavak           ###   ########.fr       */
+/*   Created: 2022/01/30 18:13:06 by okavak            #+#    #+#             */
+/*   Updated: 2022/01/31 00:02:45 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-    char    *str;
-    int str_len;
+	char	*str;
+	size_t	len;
 
-    str_len = ft_strlen(s1) + 1;
-    if ((str = malloc(str_len)))
-    {
-        ft_strlcpy(str, s1, str_len);
-        return (str);
-    }
-    return (NULL);
+	len = ft_strlen(s1) + 1;
+	str = malloc(sizeof(char) * len);
+	if (str)
+	{
+		return (0);
+	}
+	return (ft_memcpy(str, s1, len));
 }
-/*int main()
+/*int	main()
 {
-    printf("%s",ft_strdup("deneme"));
+	printf("%s",ft_strdup("deneme"));
 }*/

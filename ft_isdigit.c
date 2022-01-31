@@ -6,19 +6,18 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 22:59:45 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/06 01:06:28 by okavak           ###   ########.fr       */
+/*   Updated: 2022/01/30 17:35:11 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 //rakam (0-9) olup olmadığını kontrol eder.
-int	ft_isdigit(int a)
+int	ft_isdigit(int c)
 {
-	if (a >= '0' && a <= '9')
+	if (c >= '0' && c <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 /*int	main()
 {
