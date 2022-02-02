@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 18:13:06 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/31 00:02:45 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/02 02:17:31 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	len = ft_strlen(s1) + 1;
 	str = malloc(sizeof(char) * len);
-	if (str)
+	if (!str)
 	{
 		return (0);
 	}

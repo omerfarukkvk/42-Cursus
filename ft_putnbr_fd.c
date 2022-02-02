@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/17 17:33:08 by okavak            #+#    #+#             */
-/*   Updated: 2022/02/02 02:13:10 by okavak           ###   ########.fr       */
+/*   Created: 2022/02/02 04:14:11 by okavak            #+#    #+#             */
+/*   Updated: 2022/02/02 04:16:35 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	size_t	src_size;
+	unsigned int	index;
 
-	i = 0;
-	src_size = ft_strlen(src);
-	if (!dstsize)
-		return (src_size);
-	while (src[i] && i < (dstsize - 1))
+	index = 0;
+	if (n < 0)
 	{
-		dst[i] = src[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		index = n * -1;
 	}
-	dst[i] = '\0';
-	return (src_size);
+	else
+		index = n;
+	if (index > 9)
+		ft_putnbr_fd(index / 10, fd);
+	ft_putchar_fd(index % 10 + '0', fd);
 }
-/*int	main()
+/*#include <fcntl.h>
+int main()
 {
-	char	a[] = "omer";
-	char	b[] = "faruk";
-	ft_strlcpy(a,b,4);
-	//printf("%zu", ft_strlcpy(a,b,2));
-	printf("a verisi %s\nb verisi %s",a,b);
+    int fd1 = open("test.txt", O_RDONLY);
+    ft_putnbr_fd(3123, 1);
 }*/
