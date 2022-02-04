@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: okavak <okavak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 16:36:46 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/10 22:58:28 by okavak           ###   ########.fr       */
+/*   Created: 2022/02/04 04:26:22 by okavak            #+#    #+#             */
+/*   Updated: 2022/02/04 04:33:47 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//1.girilen pointeri verilen byte kadar "\0" yazdirir.
-void	ft_bzero(void *str, size_t n)
-{
-	ft_memset(str, '\0', n);
-}
-/*int	main()
-{
-	char a[] = "alfabetik";
 
-	ft_bzero(a, 3);
-}*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, s + i);
+		i++;
+	}
+}

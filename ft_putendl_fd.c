@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 04:05:46 by okavak            #+#    #+#             */
-/*   Updated: 2022/02/02 04:17:58 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/04 04:03:58 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }
-/*
-#include <fcntl.h>
-int main()
+/*int	main()
 {
-    int fd1 = open("test.txt", O_RDONLY);
-    ft_putendl_fd("ali karabay", 1);
-}
-*/
+	char a[] = "Omer";
+	int b = 1;
+
+	ft_putendl_fd(a, b);
+}*/

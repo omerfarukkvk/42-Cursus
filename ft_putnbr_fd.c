@@ -28,9 +28,7 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(index / 10, fd);
 	ft_putchar_fd(index % 10 + '0', fd);
 }
-/*#include <fcntl.h>
-int main()
+/*int	main()
 {
-    int fd1 = open("test.txt", O_RDONLY);
-    ft_putnbr_fd(3123, 1);
+	ft_putnbr_fd(121, 1);
 }*/

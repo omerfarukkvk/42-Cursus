@@ -25,3 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
+/*int	main()
+{
+	printf("deneme", 2, 3)
+}*/

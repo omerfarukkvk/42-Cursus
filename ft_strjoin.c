@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: okavak <okavak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 23:30:11 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/31 00:04:47 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/04 04:38:14 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (0);
 	omer = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!omer)
+		return (0);
 	while (s1[i])
 	{
 		omer[i] = s1[i];

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: okavak <okavak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 20:54:49 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/31 00:03:28 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/04 04:42:41 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
 	size_t	index;
-
+	if (!s)
+		return (0);
 	if (ft_strlen(s) < len)
 		len = ft_strlen(s);
 	if (start >= ft_strlen(s))

@@ -5,95 +5,76 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 00:12:42 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/31 02:17:52 by okavak           ###   ########.fr       */
+/*   Created: 2022/02/04 04:02:36 by okavak            #+#    #+#             */
+/*   Updated: 2022/02/04 04:02:45 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int    kelime(char *str, char c)
+static size_t	if_word_len(char const *s, char c)
 {
-    int    i;
-    int    a;
-    int    control;
+	size_t	len;
 
-    i = 0;
-    a = 0;
-    control = 0;
-    while (str[i])
-    {
-        if (str[i] != c && control == 0)
-        {
-            a++;
-            control = 1;
-        }
-        else if (str[i] == c)
-            control = 0;
-        i++;
-    }
-    return (a);
+	len = 0;
+	while (s[len] != '\0' && s[len] != c)
+		len++;
+	return (len);
 }
 
-char    *word_len(int start, int end, char *s)
+static size_t	len_word(char const *s, char c)
 {
-    char *osman;
-    int    i;
+	size_t	len;
 
-    i = 0;
-    osman = malloc(sizeof(char) * end - start + 1);
-    if (!osman)
-        return (0);
-    while (start < end)
-    {
-        osman[i] = s[start];
-        start++;
-        i++;
-    }
-    osman[i] = 0;
-    return (osman);
+	len = 0;
+	while (*s != '\0')
+	{
+		if (*s != c && (s[1] == '\0' || s[1] == c))
+			len++;
+		s++;
+	}
+	return (len);
 }
 
-char    **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-    char    **str;
-    int        word;
-    int        end;
-    int        start;
-    int        index;
+	char	**res;
+	size_t	index;
+	size_t	two_index;
+	size_t	word_len;
 
-    end = 0;
-    start = -1;
-    index = 0;
-    word = kelime(s, c);
-    str = (char **)malloc(sizeof(char *) * (word + 1));
-    if (!str)
-        return (0);
-    while (word-- >= 0)
-    {
-        while (s[end] != 0)
-        {
-            if (s[end] != c && start == -1)
-            {
-                start = end;
-            }
-            else if (s[end] == c || s[end + 1] == 0)
-            {
-              if (s[end + 1] == 0)
-                end++;
-                
-                str[index] = word_len(start, end, s);
-                index++;
-                start = -1;
-            }
-            end++;
-        }
-    }
-    str[index] = 0;
-    return (str);
+	if (!s)
+		return (NULL);
+	word_len = len_word(s, c);
+	res = (char **)malloc(sizeof(char *) * word_len + 1);
+	if (res == NULL)
+		return (NULL);
+	index = 0;
+	while (index < word_len)
+	{
+		while (*s == c && *s != '\0')
+			s++;
+		res[index] = (char *)malloc(sizeof(char) * if_word_len(s, c) + 1);
+		two_index = 0;
+		while (*s != c && *s != '\0')
+			res[index][two_index++] = *s++;
+		res[index][two_index] = '\0';
+		index++;
+	}
+	res[index] = NULL;
+	return (res);
 }
-int    main()
+/*int	main()
 {
-    char    **s;
-    s = ft_split("ahmet,mehmet", ',');
-}
+	char a[] = "OkFarukkavak";
+	char b = 'k'; 
+	char **c = ft_split(a,b);
+	char *str;
+	int i = 0;
+
+	while (*c)
+	{
+		printf("%s", *c);
+			c++;
+	}
+}*/

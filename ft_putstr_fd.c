@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 03:59:36 by okavak            #+#    #+#             */
-/*   Updated: 2022/02/02 04:18:26 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/03 20:30:16 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,9 @@ void	ft_putstr_fd(char *s, int fd)
 		return ;
 	i = 0;
 	while (s[i])
-		write(fd, &s[i++], 0);
+		write(fd, &s[i++], 1);
 }
-/*
-#include <fcntl.h>
-int main()
+/*int	main()
 {
-    int fd1 = open("foo.txt", O_RDONLY);
-    ft_putstr_fd("ali karabay", 1);
-}
-*/
+	ft_putstr_fd("deneme", 1);
+}*/
