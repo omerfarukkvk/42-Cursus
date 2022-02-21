@@ -9,38 +9,48 @@
 /*   Updated: 2022/02/09 12:51:45 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
+
+static long	ft_len(long src)
+{
+	int	i;
+
+	i = 0;
+	if (src == 0)
+		return (1);
+	if (src < 0)
+		i++;
+	while (src)
+	{
+		src /= 10;
+		i++;
+	}
+	return (i);
+}
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		tmp;
-	int		index;
+	char	*ret;
+	int		i;
+	long	num;
 
-	index = 1;
-	tmp = n;
-	while (tmp && index++)
-		tmp /= 10;
-	str = (char *)malloc(sizeof(char) *((n < 0) + index + (n == 0)));
-	if (!str)
+	num = n;
+	i = ft_len(num);
+	ret = malloc(i + 1);
+	if (ret == NULL)
 		return (NULL);
-	str += (n < 0) + index - 1 + (n == 0);
-	*str = '\0';
-	if (n == 0)
-		*(--str) = '0';
-	index = (n >= 0) * 2 - 1;
-	while (n)
+	if (n < 0)
 	{
-		*(--str) = (n % (10 * index)) * index + '0';
-		n /= 10;
+		num *= -1;
+		ret[0] = '-';
 	}
-	if (index < 0)
-		*(--str) = '-';
-	return (str);
+	ret[i] = 0;
+	i--;
+	while (i >= (n < 0))
+	{
+		ret[i] = (num % 10) + '0';
+		num /= 10;
+		i--;
+	}
+	return (ret);
 }
-
-/*int main()
-{
-    printf("%s", ft_itoa(-68768));
-}*/

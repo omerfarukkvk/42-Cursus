@@ -14,24 +14,22 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*str;
+	char	*p;
 
-	str = s;
+	p = 0;
 	while (*s)
-		s++;
-	if (c == 0)
-		return ((char *)s);
-	while (s >= str)
 	{
-		if (*s == c)
-			return ((char *)s);
-		s--;
+		if (*s == ((unsigned char) c))
+			p = (char *)s;
+		s++;
 	}
-	return (0);
+	if ((unsigned char)c == '\0')
+		return ((char *)s);
+	return (p);
 }
 /*int	main()
 {
-	char a[] = "hello";
+	char a[] = "omerherzamangelmeiyor";
 	
 	printf("%s",ft_strrchr(a,'e'));
 }*/
