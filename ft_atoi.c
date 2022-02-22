@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//char olarak verilen stringi int'e çevirir
 int	ft_atoi(const char *str)
 {
 	int	neg;
