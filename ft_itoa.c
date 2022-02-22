@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
+//int olarak verilen değeri char'a çevirir.
 static long	ft_len(long src)
 {
 	int	i;
@@ -54,3 +55,7 @@ char	*ft_itoa(int n)
 	}
 	return (ret);
 }
+/*int	main()
+{
+	printf("%s",ft_itoa(-123));
+}*/
