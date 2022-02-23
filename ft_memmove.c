@@ -12,26 +12,37 @@
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+//memcpyden farkı daha güvenli olması bellek hatası alınmaması.
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*tmp;
-	char	*dest;
+	char	*s;
+	char	*d;
+	size_t	i;
 
-	tmp = (char *)src;
-	dest = (char *)dst;
-	if (tmp < dest)
+	s = (char *)src;
+	d = (char *)dst;
+	i = 0;
+	if (!len || dst == src)
+		return (dst);
+	if (d > s)
 	{
-		while (n--)
-			dest[n] = tmp[n];
+		while (len-- > 0)
+			d[len] = s[len];
 	}
 	else
-		ft_memcpy(dest, tmp, n);
+	{
+		while (i < len)
+		{
+			d[i] = s[i];
+			i++;
+		}
+	}
 	return (dst);
 }
-/*int	main()
+int	main()
 {
 	char a[] = "hello";
 	char b[] = "world";
 
-	printf("%s",ft_memmove(a,b,2));
-}*/
+	printf("%s",(char *)ft_memmove(a,b,2));
+}

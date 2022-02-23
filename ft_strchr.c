@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//c de verilen değer stringde eşit gelince c ve geri kalan karakterleri döndürür.
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

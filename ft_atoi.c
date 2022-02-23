@@ -38,5 +38,5 @@ int	ft_atoi(const char *str)
 }
 /*int	main()
 {
-	printf("%d", atoi("-235"));
+	printf("%d", ft_atoi("-235"));
 }*/

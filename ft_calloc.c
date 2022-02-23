@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//yer ayırırken belleğin içinde bi değer varsa içine null atar.
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*array;

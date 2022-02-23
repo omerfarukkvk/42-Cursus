@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//size kadar olan alanda verilen int değerini arar karşılaştığı ilk verinin adresini döndürür.
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

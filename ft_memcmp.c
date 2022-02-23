@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//s1 ve s2'yi size kadar tarar ve eşit değil isleler birbirnin farkını döndürür.
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t				i;
