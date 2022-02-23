@@ -39,10 +39,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-int	main()
+/*int	main()
 {
 	char a[] = "hello";
 	char b[] = "world";
 
 	printf("%s",(char *)ft_memmove(a,b,2));
-}
+}*/

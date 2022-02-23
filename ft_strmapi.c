@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
-char	ft_f(unsigned int a,char b)
+/*char	ft_f(unsigned int a,char b)
 {
 	printf("%d %c\n",a,b);
 }
@@ -38,4 +38,4 @@ int	main()
 	char a[]="deneme";
 
 	ft_strmapi(a,ft_f);
-}
+}*/
