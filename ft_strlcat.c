@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//dstyi srcnin üstüne yazar.
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
@@ -39,5 +40,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	char	a[]	= "omer";
 	char	b[] = "faruk";
 
-	printf("%zu",ft_strlcat(a,b,3));
+	printf("%zu",ft_strlcat(a,b,4));
 }*/

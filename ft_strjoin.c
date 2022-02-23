@@ -12,9 +12,10 @@
 
 #include "libft.h"
 
+//s1 ve s2 yi tek string olarak yazdırır.
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*omer;
+	char	*str;
 	int		i;
 	int		i2;
 
@@ -22,21 +23,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i2 = 0;
 	if (!s1 || !s2)
 		return (0);
-	omer = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (!omer)
+	str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!str)
 		return (0);
 	while (s1[i])
 	{
-		omer[i] = s1[i];
+		str[i] = s1[i];
 		i++;
 	}
 	while (s2[i2])
 	{
-		omer[i++] = s2[i2];
+		str[i++] = s2[i2];
 		i2++;
 	}
-	omer[i] = '\0';
-	return (omer);
+	str[i] = '\0';
+	return (str);
 }
 /*int	main()
 {

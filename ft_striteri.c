@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//liste üzerinde dolaşıp yazılan fonksiyonu tüm karakterlere uygular.
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
@@ -23,3 +24,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+/*void	ft_f(unsigned int a, char* b)
+{
+	printf("%d %c\n",a,*b);
+}
+int	main()
+{
+	char a[]="omerfaruk";
+
+	ft_striteri(a, ft_f);
+}*/

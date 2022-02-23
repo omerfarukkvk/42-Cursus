@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//malloc ile yer ayırıp s1'i yazdırır.
 char	*ft_strdup(const char *s1)
 {
 	char	*str;
