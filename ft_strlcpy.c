@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//size -1 kadar srcdeki veriyi dstye kopyalar.
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -29,11 +30,11 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_size);
 }
-/*int	main()
-{
+int	main()
+/*{
 	char	a[] = "omer";
 	char	b[] = "faruk";
-	ft_strlcpy(a,b,4);
+	ft_strlcpy(a,b,3);
 	//printf("%zu", ft_strlcpy(a,b,2));
 	printf("a verisi %s\nb verisi %s",a,b);
 }*/
