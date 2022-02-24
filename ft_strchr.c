@@ -6,13 +6,14 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 11:53:04 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/30 17:45:24 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/24 05:20:16 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//c de verilen değer stringde eşit gelince c ve geri kalan karakterleri döndürür.
+//c de verilen değer stringde eşit gelince c ve
+//geri kalan karakterleri döndürür.
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

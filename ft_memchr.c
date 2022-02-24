@@ -6,13 +6,14 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/18 03:04:24 by okavak            #+#    #+#             */
-/*   Updated: 2022/01/18 03:09:54 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/24 05:20:47 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-//size kadar olan alanda verilen int değerini arar karşılaştığı ilk verinin adresini döndürür.
+//size kadar olan alanda verilen int değerini arar
+//karşılaştığı ilk verinin adresini döndürür.
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t	i;

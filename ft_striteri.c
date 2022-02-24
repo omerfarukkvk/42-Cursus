@@ -6,7 +6,7 @@
 /*   By: okavak <okavak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 04:26:22 by okavak            #+#    #+#             */
-/*   Updated: 2022/02/04 04:33:47 by okavak           ###   ########.fr       */
+/*   Updated: 2022/02/24 04:42:03 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		f(i, s + i);

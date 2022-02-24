@@ -46,3 +46,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	printf("%s",(char *)ft_memmove(a,b,2));
 }*/
+/*int	main()
+{
+	char str[] = "123456789";
+	ft_memmove(str +2, str, 7); 
+	printf("%s", str);
+}*/
