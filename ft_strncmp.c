@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//s1 ve s2 yi n kadar tarar ascii farkını döndürür.
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
@@ -25,8 +26,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 }
 /*int	main()
 {
-	char a[] = "hello world";
+	char a[] = "mello world";
 	char b[] = "merhaba dunya";
 
-	printf("%d",ft_strncmp(&a[0],&b[0],2));
+	printf("%d",ft_strncmp(a,b,2));
 }*/

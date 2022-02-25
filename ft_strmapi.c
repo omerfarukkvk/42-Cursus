@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//mallocla yer ayırdıktan sonra f fonksiyonuna gönderir.
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

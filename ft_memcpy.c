@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//src deki stringi dst'ye yazdırır.
+//src deki stringi n kadar dst'ye yazdırır.
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*source;

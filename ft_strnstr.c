@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//size kadar tarar ve s2 elemanından sonrarsını döner.
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t		position;
@@ -27,7 +28,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
-/*int	min()
+/*int	main()
 {
-	printf("")
+	printf("%s",ft_strnstr("merhaba","e",));
 }*/
