@@ -20,6 +20,6 @@ void	ft_bzero(void *str, size_t n)
 /*int	main()
 {
 	char a[] = "alfabetik";
-
-	ft_bzero(a, 3);
+	
+	printf("%s",ft_bzero(a, 3));
 }*/
