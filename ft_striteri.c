@@ -28,7 +28,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 /*void	ft_f(unsigned int a, char* b)
 {
-	printf("%d %c\n",a,*b);
+	b[a] -= 32;
 }
 int	main()
 {

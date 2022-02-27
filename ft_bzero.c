@@ -21,5 +21,6 @@ void	ft_bzero(void *str, size_t n)
 {
 	char a[] = "alfabetik";
 	
-	printf("%s",ft_bzero(a, 3));
+	ft_bzero(a + 3, 3);
+	printf("%s",a);
 }*/

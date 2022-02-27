@@ -64,17 +64,14 @@ char	**ft_split(char const *s, char c)
 	res[index] = NULL;
 	return (res);
 }
-/*int	main()
+/*int main()
 {
-	char a[] = "OkFarukkavak";
-	char b = 'k'; 
-	char **c = ft_split(a,b);
-	char *str;
+	char *a = "omer,faruk,kavak";
+	char **res = ft_split(a, ',');
 	int i = 0;
-
-	while (*c)
+	while (res[i])
 	{
-		printf("%s", *c);
-			c++;
+		printf("%s\n", res[i]);
+		i++;	
 	}
 }*/

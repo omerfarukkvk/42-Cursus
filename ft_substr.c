@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//s'yi starttan sonra başlatıp size kadar döndürür.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
@@ -34,5 +35,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*int	main()
 {
-	printf("%s",ft_substr("deneme", 2, 4));
+	printf("%s",ft_substr("deneme", 2, 3));
 }*/

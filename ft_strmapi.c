@@ -34,11 +34,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 /*char	ft_f(unsigned int a,char b)
 {
-	printf("%d %c\n",a,b);
+	b -= 32;
+	return (b);
 }
 int	main()
 {
 	char a[]="deneme";
 
-	ft_strmapi(a,ft_f);
+	printf("%s",ft_strmapi(a,ft_f));
 }*/

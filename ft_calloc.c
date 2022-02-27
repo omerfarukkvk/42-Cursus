@@ -22,17 +22,8 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	return (ft_memset(array, 0, size * count));
 }
-/*int	main(void)
+/*int main()
 {
-	size_t	x = 5;
-	size_t	y = 2;
-	int		q = 10;
-
-	void *z = ft_calloc(x,y);
-
-	while (q <= 20)
-	{
-		printf("%p", (char *)z);
-		q++;
-	}
+    int *a = ft_calloc(3, sizeof(int));
+    printf("%d", *a);
 }*/

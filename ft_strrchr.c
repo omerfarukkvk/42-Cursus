@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//str'de c'nin geçtiği son yeri ara ve sonrasını bastırır.
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*p;
@@ -31,5 +32,5 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char a[] = "deneme";
 	
-	printf("%s",ft_strrchr(a,'e'));
+	printf("%s",ft_strrchr(a,'n'));
 }*/

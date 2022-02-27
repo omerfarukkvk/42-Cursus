@@ -12,6 +12,7 @@
 
 #include "libft.h"
 
+//s1'i tarar set stringinde verdiğimiz harfleri çıkartır
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -25,10 +26,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
-/*
-int main()
+/*int main()
 {
     char *a = "omkerfarukkavak";
-    char *s = "k";
+    char *s = "mko";
     printf("%s",ft_strtrim(a,s));
 }*/
