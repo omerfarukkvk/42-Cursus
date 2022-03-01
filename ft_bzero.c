@@ -19,8 +19,8 @@ void	ft_bzero(void *str, size_t n)
 }
 /*int	main()
 {
-	char a[] = "alfabetik";
-	
-	ft_bzero(a + 3, 3);
-	printf("%s",a);
+	char a[]= "faruk";
+
+	ft_bzero(a,2);
+	printf("%s",&a[2]);
 }*/

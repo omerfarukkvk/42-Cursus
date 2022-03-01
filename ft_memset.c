@@ -29,5 +29,5 @@ void	*ft_memset(void *str, int c, size_t n)
 {
 	char a[] = "deneme";
 
-	printf("%s",ft_memset(&a,'i',2));
+	printf("%s",ft_memset(a,'i',2));
 }*/

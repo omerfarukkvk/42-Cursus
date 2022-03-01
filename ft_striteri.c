@@ -28,11 +28,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 /*void	ft_f(unsigned int a, char* b)
 {
-	b[a] -= 32;
+	*b=*b-32;
 }
 int	main()
 {
 	char a[]="omerfaruk";
-
+	
 	ft_striteri(a, ft_f);
+	printf("%s",a);
 }*/

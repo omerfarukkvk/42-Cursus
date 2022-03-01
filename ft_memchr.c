@@ -29,5 +29,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 /*int	main()
 {
-	printf("%p",ft_memchr("deneme", 2, 3));
+	printf("%s",ft_memchr("deneme", 'e', 3));
 }*/

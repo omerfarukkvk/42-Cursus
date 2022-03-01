@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//s'yi starttan sonra başlatıp size kadar döndürür.
+//s'yi starttan başlatıp size kadar döndürür.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;

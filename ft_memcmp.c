@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//s1 ve s2'yi size kadar tarar ve eşit değil isleler birbirnin farkını döndürür.
+//s1 ve s2'yi size kadar tarar ve eşit değil isleler birbirnin asci farkı döner.
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t				i;
@@ -32,8 +32,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 /*int	main()
 {
-	char	a[] = "bilgisayar";
-	char	b[] = "bilgiler";
-
-	printf("%d", ft_memcmp(a,b,6));
+	printf("%d",ft_memcmp("deneme","denek",5));
 }*/
