@@ -28,7 +28,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 /*int main()
 {
-    char *a = "omkerfarukkavak";
-    char *s = "mko";
+    char *a = "   omer faruk kavak   ";
+    char *s = " ";
     printf("%s",ft_strtrim(a,s));
 }*/
