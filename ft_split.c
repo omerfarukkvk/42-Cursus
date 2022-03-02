@@ -64,14 +64,15 @@ char	**ft_split(char const *s, char c)
 	res[index] = NULL;
 	return (res);
 }
-/*int main()
+/*int	main()
 {
-	char *a = "omer,faruk,kavak";
-	char **res = ft_split(a, ',');
-	int i = 0;
-	while (res[i])
+	char a[]="omer,faruk,kavak";
+	char **b = ft_split(a,',');
+	int	i = 0;
+
+	while (b[i])
 	{
-		printf("%s\n", res[i]);
-		i++;	
+		printf("%s\n",b[i]);
+		i++;
 	}
 }*/
