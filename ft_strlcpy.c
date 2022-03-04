@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-//size -1 kadar srcdeki veriyi dstye kopyalar.
+//size kadar srcdeki veriyi dstye kopyalar.
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

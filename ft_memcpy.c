@@ -28,7 +28,9 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 /*int	main()
 {
-	char a[] = "hello";
-	char b[] = "world!";
-	printf("%s",ft_memcpy(a, b, 3));
+	char a[] = "deneme";
+	char b[] = "merhaba";
+	ft_memcpy(b,a,4);
+
+	printf("%s",b);
 }*/

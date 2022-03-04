@@ -24,6 +24,6 @@ void	*ft_calloc(size_t count, size_t size)
 }
 /*int main()
 {
-    int *a = ft_calloc(3, sizeof(int));
-    printf("%d", *a);
+	char *a = ft_calloc(3,sizeof(int));
+	printf("%d",*a);
 }*/

@@ -28,5 +28,5 @@ size_t	ft_strlen(const char *s)
 /*int	main()
 {
 	char a[]="Hello World";
-	printf("%d",ft_strlen(&a[0]));
+	printf("%zu",ft_strlen(a));
 }*/

@@ -18,7 +18,7 @@ static long	ft_len(long src)
 
 	i = 0;
 	if (src == 0)
-		return (1);
+		i++;
 	if (src < 0)
 		i++;
 	while (src)
