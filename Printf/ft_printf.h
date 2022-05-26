@@ -18,7 +18,7 @@
 # include <stdio.h>
 
 int			ft_printf(const char *str, ...);
-int			ft_check(va_list args,char letter);
+int			ft_check(va_list args, char letter);
 int			ft_putchar(int c);
 int			ft_putstr(char *s);
 

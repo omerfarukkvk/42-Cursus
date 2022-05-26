@@ -17,15 +17,16 @@ int	ft_putchar(int c)
 	write(1, &c, 1);
 	return (1);
 }
-int	ft_check(va_list args,char letter)
+
+int	ft_check(va_list args, char letter)
 {
 	int	length;
 
 	length = 0;
 	if (letter == 'c')
-		length += ft_putchar(va_arg(args,int));
+		length += ft_putchar(va_arg(args, int));
 	else if (letter == 's')
-		length += ft_putstr(va_arg(args,char *));
+		length += ft_putstr(va_arg(args, char *));
 	/*else if (letter == 'p')
 	else if (letter == 'd')
 	else if (letter == 'i')
@@ -35,12 +36,13 @@ int	ft_check(va_list args,char letter)
 	else if (letter == '%')*/
 	return (length);
 }
+
 int	ft_printf(const char *str, ...)
 {
 	va_list	args;
 	int		i;
 	int		length;
-	
+
 	i = 0;
 	length = 0;
 	va_start(args, str);
@@ -48,7 +50,7 @@ int	ft_printf(const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			length += ft_check(args,str[i + 1]);
+			length += ft_check(args, str[i + 1]);
 			i++;
 		}
 		else
