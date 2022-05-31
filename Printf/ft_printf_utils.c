@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:45:25 by okavak            #+#    #+#             */
-/*   Updated: 2022/05/26 19:14:01 by okavak           ###   ########.fr       */
+/*   Updated: 2022/05/31 07:53:14 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,23 @@ int	ft_putstr(char *s)
 	int	i;
 
 	i = 0;
+	if(s == NULL)
+	{
+		write(1,"(null)",6);
+		return(6);
+	}	
 	while (s[i])
 	{
 		write(1, &s[i], 1);
 		i++;
 	}
 	return (i);
+}
+
+int	ft_putnumber(int n)
+{
+	if (n == -2147483647)
+	{
+		
+	}
 }

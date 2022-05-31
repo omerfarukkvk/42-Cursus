@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:08:10 by okavak            #+#    #+#             */
-/*   Updated: 2022/05/26 19:09:06 by okavak           ###   ########.fr       */
+/*   Updated: 2022/05/31 07:49:37 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ int	ft_check(va_list args, char letter)
 	else if (letter == 's')
 		length += ft_putstr(va_arg(args, char *));
 	/*else if (letter == 'p')
-	else if (letter == 'd')
-	else if (letter == 'i')
+	else if (letter == 'd' | letter == 'i')
+		length += ft_putnumber(va_arg(arg, int);
 	else if (letter == 'u')
 	else if (letter == 'x')
 	else if (letter == 'X')
 	else if (letter == '%')*/
+	else
+		write(1, &letter, 1);
 	return (length);
 }
 
@@ -62,5 +64,5 @@ int	ft_printf(const char *str, ...)
 }
 int	main()
 {
-	printf("veri=%d\n",ft_printf("%s\n","Hello world"));
+	ft_printf("%d",123124124);
 }
