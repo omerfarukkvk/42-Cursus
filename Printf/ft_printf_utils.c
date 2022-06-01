@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:45:25 by okavak            #+#    #+#             */
-/*   Updated: 2022/05/31 07:53:14 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/01 17:06:52 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,26 @@ int	ft_putstr(char *s)
 	return (i);
 }
 
-int	ft_putnumber(int n)
+int	ft_step(int n)
 {
-	int	length;
+	int	step;
 
-	length = 0;
-	if (n == -2147483647)
+	step = 0;
+	if(n == 0)
+		step++;
+	if (n < 0)
+		step++;
+	if (n > 10)
 	{
-		length += ft_putstr("-2");
-		length += ft_putstr("147483647");
+		n /= 10;
+		step++;
 	}
-	if 
+	return (step);
+}
+
+
+int	ft_printpercent(char c)
+{
+	write(1, "%", 1);
+	return (1);
 }
