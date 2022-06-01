@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:08:10 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/01 16:54:12 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/01 18:54:24 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,13 @@ int	ft_check(va_list args, char letter)
 	else if (letter == 's')
 		length += ft_putstr(va_arg(args, char *));
 	//else if (letter == 'p')
+	//	length += ft_printptr(va_arg(args,void *));
 	else if (letter == 'd' | letter == 'i')
-		length += ft_putnumber(va_arg(args, int));
+		length += ft_printnumb(va_arg(args, int));
 	//else if (letter == 'u')
 	//else if (letter == 'x' | letter == 'X')
 	else if (letter == '%')
-		length += ft_printpercent(letter);
+		write(1, "%", 1);
 	else
 		write(1, &letter, 1);
 	return (length);
@@ -64,5 +65,5 @@ int	ft_printf(const char *str, ...)
 }
 int	main()
 {
-	ft_printf("%d",-12);
+	ft_printf("%d",-91456113413451);
 }
