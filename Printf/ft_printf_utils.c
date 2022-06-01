@@ -32,8 +32,13 @@ int	ft_putstr(char *s)
 
 int	ft_putnumber(int n)
 {
+	int	length;
+
+	length = 0;
 	if (n == -2147483647)
 	{
-		
+		length += ft_putstr("-2");
+		length += ft_putstr("147483647");
 	}
+	if 
 }
