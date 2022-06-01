@@ -29,10 +29,10 @@ int	ft_check(va_list args, char letter)
 		length += ft_putstr(va_arg(args, char *));
 	//else if (letter == 'p')
 	//	length += ft_printptr(va_arg(args,void *));
-	else if (letter == 'd' | letter == 'i')
+	else if (letter == 'd' || letter == 'i')
 		length += ft_printnumb(va_arg(args, int));
-	else if (letter == 'u')
-		length += 
+	//else if (letter == 'u')
+	//	length += 
 	//else if (letter == 'x' | letter == 'X')
 	else if (letter == '%')
 		write(1, "%", 1);
@@ -66,5 +66,5 @@ int	ft_printf(const char *str, ...)
 }
 int	main()
 {
-	ft_printf("%d",-91456113413451);
+	ft_printf("%s", 0);
 }
