@@ -1,11 +1,9 @@
-SRCS			=	ft_printf.c		ft_printf_utils.c	ft_itoa.c
-					
-
+SRCS			=	ft_printf.c ft_printf_utils.c ft_itoa.c
 OBJS			= $(SRCS:.c=.o)
 
 CC				= gcc
 RM				= rm -f
-CFLAGS			= -Wall -Wextra -Werror -I.
+CFLAGS			= -Wall -Wextra -Werror
 
 NAME			= ft_printf.a
 
@@ -22,7 +20,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-norm:			
-				norminette *.[ch]
-
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
