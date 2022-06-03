@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 16:45:25 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/03 03:43:28 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/03 03:54:11 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,13 @@ int	ft_putstr(char *s)
 int	ft_printnumb(int n)
 {
 	char	*num;
-	int		length;
+	int		len;
 
-	length = 0;
+	len = 0;
 	num = ft_itoa(n);
-	length = ft_putstr(num);
+	len = ft_putstr(num);
 	free(num);
-	return (length);
+	return (len);
 }
 
 int	puthex(unsigned long p, char *base, int cheker, int base_len)
@@ -50,22 +50,22 @@ int	puthex(unsigned long p, char *base, int cheker, int base_len)
 	if (cheker == 1)
 		len += write(1, "0x", 2);
 	if (p / base_len != 0)
-		len += ft_printptr(p / base_len, base, 0, base_len);
+		len += puthex(p / base_len, base, 0, base_len);
 	len += write(1, &base[p % base_len], 1);
 	return (len);
 }
 
 int	ft_printunumb(unsigned int n)
 {
-	int	length;
+	int	len;
 
-	length = 0;
+	len = 0;
 	if (n >= 0 && n <= 9)
-		length += ft_putchar(n + '0');
+		len += ft_putchar(n + '0');
 	else
 	{
-		length += ft_printnumb(n / 10);
-		length += ft_printnumb(n % 10);
+		len += ft_printnumb(n / 10);
+		len += ft_printnumb(n % 10);
 	}
-	return (length);
+	return (len);
 }

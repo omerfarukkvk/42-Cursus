@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:11:12 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/03 03:40:52 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/03 03:51:21 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 # include <stdlib.h>
 
 int			ft_printf(const char *str, ...);
