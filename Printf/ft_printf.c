@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 13:08:10 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/02 22:17:23 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/02 23:07:45 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	ft_check(va_list args, char letter)
 	else if(letter == 'X')
 		length += ft_printptr(va_arg(args, unsigned), "0123456789ABCDEF", 0, 16);
 	else if (letter == '%')
-		write(1, "%", 1);
+		length += write(1, "%", 1);
 	else
-		write(1, &letter, 1);
+		length += write(1, &letter, 1);
 	return (length);
 }
 
@@ -67,8 +67,8 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (length);
 }
-int	main()
+/*int	main()
 {
 	ft_printf("%x\n", 1234567890);
 	printf("%x", 1234567890);
-}
+}*/

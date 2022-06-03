@@ -5,7 +5,7 @@ CC				= gcc
 RM				= rm -f
 CFLAGS			= -Wall -Wextra -Werror
 
-NAME			= ft_printf.a
+NAME			= libftprintf.a
 
 all:			$(NAME)
 
