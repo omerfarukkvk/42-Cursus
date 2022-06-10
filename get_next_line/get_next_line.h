@@ -6,13 +6,13 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/10 12:44:01 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/10 12:50:28 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/10 14:33:27 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# include <>
+# include <stdlib.h> 
 
 #endif
