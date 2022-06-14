@@ -15,9 +15,9 @@
 char	*ft_fit_buff(int fd, char *left_str)
 {
 	char	*buff;
-	int			rd_bytes;
+	int		rd_bytes;
 
-	buff = malloc(sizeof (char) * (BUFFER_SIZE + 1))
+	buff = malloc(sizeof (char) * (BUFFER_SIZE + 1));
 	if (!buff)
 		return (NULL);
 	rd_bytes = 1;
