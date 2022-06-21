@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:30:19 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/21 16:28:52 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/21 17:31:17 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strjoin(char *left_str, char *buff)
 
 	if (!left_str)
 	{
-		left_str =(char *)malloc(1 * sizeof(char));
+		left_str = (char *)malloc(1 * sizeof(char));
 		left_str[0] = '\0';
 	}
 	if (!left_str || !buff)
@@ -59,7 +59,7 @@ char	*ft_strchr(char *str, int c)
 	i = 0;
 	if (!str)
 		return (0);
-	if (str[i] == '\0')
+	if (c == '\0')
 		return ((char *)&str[ft_strlen(str)]);
 	while (str[i] != '\0')
 	{
@@ -74,7 +74,7 @@ char	*ft_get_line(char *left_str)
 {
 	char	*str;
 	int		i;
-	
+
 	i = 0;
 	if (!left_str[i])
 		return (NULL);
