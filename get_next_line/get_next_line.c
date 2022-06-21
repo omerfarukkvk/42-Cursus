@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekutlay <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/29 23:48:06 by ekutlay           #+#    #+#             */
-/*   Updated: 2022/06/02 17:21:50 by ekutlay          ###   ########.fr       */
+/*   Created: 2022/06/20 18:49:19 by okavak            #+#    #+#             */
+/*   Updated: 2022/06/21 16:20:23 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_fit_buff(int fd, char *left_str)
+char	*ft_buff(int fd, char *left_str)
 {
-	char	*buff;
 	int		rd_bytes;
+	char	*buff;
 
 	buff = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buff)
@@ -33,21 +33,21 @@ char	*ft_fit_buff(int fd, char *left_str)
 		buff[rd_bytes] = '\0';
 		left_str = ft_strjoin(left_str, buff);
 	}
-	free (buff);
+	free(buff);
 	return (left_str);
 }
 
 char	*get_next_line(int fd)
 {
-	char		*line;
-	static char	*left_str;
+	char				*line;
+	static char			*left_str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	left_str = ft_fit_buff(fd, left_str);
+	left_str = ft_buff(fd, left_str);
 	if (!left_str)
 		return (NULL);
-	line = ft_catch_new_line(left_str);
-	left_str = ft_new_next_str(left_str);
+	line = ft_get_line(left_str);
+	left_str = ft_last_str(left_str);
 	return (line);
 }
