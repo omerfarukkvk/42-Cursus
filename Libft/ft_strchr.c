@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 11:53:04 by okavak            #+#    #+#             */
-/*   Updated: 2022/02/24 05:20:16 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/20 18:12:14 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	a[]= "deneme";
 
-	printf("%s",ft_strchr(a,'n'));
+	printf("%s",ft_strchr(a,'\0'));
 }*/
