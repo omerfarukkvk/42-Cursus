@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:49:19 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/22 20:15:45 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/22 18:02:18 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_buff(int fd, char *left_str)
 {
@@ -40,26 +40,14 @@ char	*ft_buff(int fd, char *left_str)
 char	*get_next_line(int fd)
 {
 	char				*line;
-	static char			*left_str;
+	static char			*left_str[4096];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	left_str = ft_buff(fd, left_str);
-	if (!left_str)
+	left_str[fd] = ft_buff(fd, left_str[fd]);
+	if (!left_str[fd])
 		return (NULL);
-	line = ft_get_line(left_str);
-	left_str = ft_last_str(left_str);
+	line = ft_get_line(left_str[fd]);
+	left_str[fd] = ft_last_str(left_str[fd]);
 	return (line);
 }
-/*#include <stdio.h>
-#include <fcntl.h>
-int	main()
-{
-	int fd,fd2,fd3;
-
-	fd = open("omarbinhalid.txt",O_RDONLY);
-	get_next_line(fd);
-	get_next_line(fd);
-	get_next_line(fd);
-	system("leaks a.out");
-}*/
