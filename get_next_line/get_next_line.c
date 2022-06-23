@@ -6,7 +6,7 @@
 /*   By: okavak <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/20 18:49:19 by okavak            #+#    #+#             */
-/*   Updated: 2022/06/22 20:15:45 by okavak           ###   ########.fr       */
+/*   Updated: 2022/06/23 10:32:55 by okavak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,3 @@ char	*get_next_line(int fd)
 	left_str = ft_last_str(left_str);
 	return (line);
 }
-/*#include <stdio.h>
-#include <fcntl.h>
-int	main()
-{
-	int fd,fd2,fd3;
-
-	fd = open("omarbinhalid.txt",O_RDONLY);
-	get_next_line(fd);
-	get_next_line(fd);
-	get_next_line(fd);
-	system("leaks a.out");
-}*/
