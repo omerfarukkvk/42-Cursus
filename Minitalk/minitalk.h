@@ -1,9 +1,9 @@
 #ifndef MINITALK_H
 # define MINITALK_H
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdarg.h>
 
 int		ft_printf(char *str, ...);
 int		ft_control(va_list args, char step);
