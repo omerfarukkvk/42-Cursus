@@ -4,6 +4,7 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include <signal.h>
 
 int		ft_printf(char *str, ...);
 int		ft_control(va_list args, char step);
