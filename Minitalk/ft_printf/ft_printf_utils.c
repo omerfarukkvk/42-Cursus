@@ -59,7 +59,7 @@ int	ft_printunumb(unsigned int n)
 	int	len;
 
 	len = 0;
-	if (n <= 9)
+	if (n >= 0 && n <= 9)
 		len += ft_putchar(n + '0');
 	else
 	{

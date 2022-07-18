@@ -1,34 +1,45 @@
-#include "minitalk.h"
+#include <signal.h>
+#include "ft_printf.h"
+#include <unistd.h>
 
-void	set_bit(int x)
+void	ft_server(int signal, siginfo_t *info, void *context)
 {
-	static int	bit = 7;
-	static int	set = 0;
+	static int	i = 0;
+	static char	c = 0;
 
-	set += x << bit;
-	if (bit == 0)
+	(void)context;
+	if(signal == SIGUSR1)
+		c = c | 1;
+	if (++i == 8)
 	{
-		write(1, &set, 1);
-		bit = 7;
-		set = 0;
+		i=0;
+		if (!c)
+		{
+			kill(info->si_pid,SIGUSR1);
+			ft_printf("\n");
+		}
+		ft_printf("%c",c);
+		c=0;
 	}
 	else
-		bit--;
+		c <<=1;
 }
 
-void	sgl_catch(int x)
+int main(void)
 {
-	if (x == SIGUSR1)
-		set_bit(1);
-	else if (x == SIGUSR2)
-		set_bit(0);
-}
+	struct sigaction	server;
+	int pid;
 
-int	main(void)
-{
-	ft_printf("PID: %u\n", getpid());
-	signal(SIGUSR1, sgl_catch);
-	signal(SIGUSR2, sgl_catch);
+	pid=getpid();
+	ft_printf("Server pid=%d\n",pid);
+	server.sa_flags= SA_SIGINFO;
+	server.sa_sigaction= ft_server;
+	if (sigaction(SIGUSR1,&server,0)== -1)
+		ft_printf("Signal Error\n");
+	if (sigaction(SIGUSR2,&server,0)== -1)
+		ft_printf("Signal Error\n");
 	while (1)
 		pause();
+	return(0);
+
 }
