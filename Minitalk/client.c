@@ -2,9 +2,9 @@
 
 void	ft_take(pid_t pid, int c)
 {
-	int n;
-	int	byt;
-	unsigned char ch;
+	int				n;
+	int				byt;
+	unsigned char	ch;
 
 	ch = c;
 	byt = 8;
