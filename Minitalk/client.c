@@ -1,56 +1,48 @@
-#include <signal.h>
-#include "ft_printf.h"
-#include <unistd.h>
+#include "minitalk.h"
 
-void	ft_ok(int signal)
+void	ft_take(pid_t pid, int c)
 {
-	if (signal == SIGUSR1)
-		ft_printf("Process Successful");
-}
+	int n;
+	int	byt;
+	unsigned char ch;
 
-int	ft_atoi(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (*str)
-		i = (i * 10) + (*str++ - '0');
-	return (i);
-}
-
-void	ft_procces(int pid, char *str)
-{
-	int		i;
-	char	c;
-
-	i = 0;
-	c = 0;
-	while (str[c])
+	ch = c;
+	byt = 8;
+	n = 128;
+	while (byt--)
 	{
-		i = 7;
-		while (i >= 0)
+		if (ch / n)
 		{
-			if (str[c] >> i & 1)
-				kill(pid, SIGUSR1);
-			else
-				kill(pid, SIGUSR2);
-			i--;
-			usleep(50);
+			ch -= n;
+			kill(pid, SIGUSR1);
 		}
-		c++;
+		else
+			kill(pid, SIGUSR2);
+		usleep(150);
+		n /= 2;
 	}
 }
 
-int	main(int argc, char **argv)
+int	main(int ac, char **av)
 {
-	int	pid;
+	int		pid;
+	int		i;
+	char	*msg;
 
-	pid = ft_atoi(argv[1]);
-	if (argc != 3)
+	i = 0;
+	if (ac == 3)
 	{
-		ft_printf("You failed.\n");
+		pid = ft_atoi(av[1]);
+		msg = av[2];
+		while (msg[i])
+		{
+			ft_take(pid, msg[i]);
+			i++;
+		}
+	}
+	else
+	{
+		ft_printf("%s", "Wrong!!!");
 		return (0);
 	}
-	signal (SIGUSR1, ft_ok);
-	ft_procces(pid, argv[2]);
 }
